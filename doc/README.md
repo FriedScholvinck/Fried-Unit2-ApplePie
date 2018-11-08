@@ -5,5 +5,8 @@
 * Each incorrect guess results in an apple falling of the tree.
 * The player wins by guessing the word correclty before all the apples are gone.
 
+###### This is the first view
 ![GitHub Logo](images/1.png)
+
+###### This is when the word 'swift' is almost complete, while a few mistakes have already been made
 ![GitHub Logo](images/2.png)
