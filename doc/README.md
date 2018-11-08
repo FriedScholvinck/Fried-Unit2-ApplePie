@@ -5,4 +5,4 @@
 * Each incorrect guess results in an apple falling of the tree.
 * The player wins by guessing the word correclty before all the apples are gone.
 
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](/images/1)
