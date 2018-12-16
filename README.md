@@ -1,5 +1,7 @@
 # Apple Pie :apple:
 
+In addition to the assignment, I added a start again button at the end of the game.
+
 * This project is an iPad game called Apple Pie.
 * It's a simple word-guessing game in which the player has a limited number of turns to guess the letters in a word.
 * Each incorrect guess results in an apple falling of the tree.
