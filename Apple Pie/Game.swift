@@ -8,7 +8,7 @@
 
 import Foundation
 
-//
+// helper struct for keeping track of guessed letters and word
 struct Game {
     var word: String
     var incorrectMovesRemaining: Int
@@ -28,7 +28,6 @@ struct Game {
         return guessedWord
     }
 
-    // 
     mutating func playerGuessed(letter: Character) {
         guessedLetters.append(letter)
         if !word.contains(letter) {

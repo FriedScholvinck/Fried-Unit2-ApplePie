@@ -10,10 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // list of words to play in that order and amount of apples on tree
     let allWords = ["buccaneer", "swift", "glorious", "incandescant", "bug", "program"]
     var listOfWords: [String] = []
     var incorrectMovesAllowed = 7
+    var currentGame: Game!
     
     var totalWins = 0 {
         didSet {
@@ -27,19 +27,15 @@ class ViewController: UIViewController {
         }
     }
     
-    // create outlets
     @IBOutlet weak var treeImageView: UIImageView!
     @IBOutlet weak var correctWordLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet var letterButtons: [UIButton]!
     @IBOutlet weak var startAgainButton: UIButton!
     
-    
-    // call newRound when view loads again
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // apply design to buttons and label
         for button in letterButtons {
             button.applyDesign()
         }
@@ -54,8 +50,6 @@ class ViewController: UIViewController {
         
         newRound()
     }
-
-    var currentGame: Game!
     
     func newRound() {
         
@@ -75,7 +69,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // update interface
+    // update interface for new word
     func updateUI() {
         var letters = [String]()
         for letter in currentGame.formattedWord {
@@ -89,7 +83,7 @@ class ViewController: UIViewController {
         treeImageView.image = UIImage(named: "Tree \(currentGame.incorrectMovesRemaining)")
     }
     
-    // when letter is tapped
+    // when a letter is tapped
     @IBAction func buttonPressed(_ sender: UIButton) {
         
         // make sure letter cannot be tapped again
